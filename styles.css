@@ -29,6 +29,7 @@ nav{
 
 .search-sort-container,.cards-container{
     margin: 0 auto;
+    width: 90%;
 } 
 
 .search{
@@ -114,12 +115,15 @@ nav{
     display: grid;
     justify-content: center;
     row-gap: 1.625em;
+    overflow: hidden;
+    word-break: break-word; 
+    margin-bottom: 8.75em;
 }
 
 .contact-card{
     max-width: 380px;
     background-color: #FFFFFF;
-    border-radius: 8px
+    border-radius: 8px;
 }
 
 .profile{
@@ -182,7 +186,7 @@ nav{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.61;
-    color: #202223;
+    color: #595959;
 
 }
 .address{
@@ -230,8 +234,10 @@ nav{
         
     .cards-container{
         width: 83%;
-        grid-template-columns: repeat(2,minmax(200px,1fr));
-        column-gap: 2.75em ;   
+        grid-template-columns: repeat(2,minmax(200px,363px));
+        justify-content: space-between;
+        column-gap: 2.75em ;
+        row-gap: 4.1875em;   
     }
 
         .profile{
@@ -266,6 +272,7 @@ nav{
             line-height: 1.5625em;
         }
         .profile-info .handle{
+            margin-top: 0;
             margin-bottom: 0;
         }
 
@@ -296,17 +303,10 @@ nav{
             object-fit: cover;
         }
 
-        /* .address .info-img-container{
-            margin-left:5px ;
-        }
-
-        .address span{
-            margin-left: 8px;
-        } */
-        
         .info-text{
             font-size: 1rem;
             line-height: 1.5625em;
+            color: #202223;
         }
         
 

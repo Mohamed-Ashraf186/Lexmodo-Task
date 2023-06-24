@@ -50,7 +50,7 @@ function renderCard(users){
                 <div class="info-img-container">
                     <img src="./assets/location-pin.svg" alt="location-pin">
                 </div>
-                    <div>
+                    <div class="info-text">
                         ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}, ${user.address.geo.lat}, ${user.address.geo.lng}
                     </div>
                 </div>
