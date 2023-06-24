@@ -38,42 +38,54 @@ function renderCard(users){
     
             <div class="contact-info">
                 <div class="email info">
+                <div class="info-img-container">
                     <img src="./assets/envelope.svg" alt="email">
+                </div>
                     <span>
                         ${user.email}
                     </span>
                 </div>
     
                 <div class="address info">
+                <div class="info-img-container">
                     <img src="./assets/location-pin.svg" alt="location-pin">
+                </div>
                     <span>
                         ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}, ${user.address.geo.lat}, ${user.address.geo.lng}
                     </span>
                 </div>
     
                 <div class="phone info">
+                <div class="info-img-container">
                     <img src="./assets/phone.svg" alt="phone">
+                </div>
                     <span>
                         ${user.phone}
                     </span>
                 </div>
     
                 <div class="website info">
+                <div class="info-img-container">
                     <img src="./assets/website.svg" alt="website">
+                </div>
                     <span>
                         ${user.website}
                     </span>
                 </div>
     
                 <div class="employer info">
+                <div class="info-img-container">
                     <img src="./assets/Employer.svg" alt="Employer">
+                </div>
                     <span>
                         ${user.company.name}
                     </span>
                 </div>
     
                 <div class="industrial info">
+                <div class="info-img-container">
                     <img src="./assets/industrial 1.svg" alt="industrial 1">
+                </div>
                     <span>
                         ${user.company.bs}
                     </span>
