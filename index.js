@@ -6,7 +6,7 @@ const sortZToA=document.querySelector('.z-a')
 
 dropDownBtn.addEventListener('click',()=>document.querySelector('.dropdown-content').classList.toggle('show'))
 
-fetch('http://jsonplaceholder.typicode.com/users')
+fetch('https://jsonplaceholder.typicode.com/users')
 .then(value=>value.json())
 .then(users=>{
     renderCard(users)
