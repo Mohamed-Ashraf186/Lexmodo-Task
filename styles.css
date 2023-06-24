@@ -23,9 +23,12 @@ nav{
 /* search */
 
 
+.container{
+    width: 100%;
+}
+
 .search-sort-container,.cards-container{
     margin: 0 auto;
-    width: 380px;
 } 
 
 .search{
@@ -107,8 +110,14 @@ nav{
 
 /* Card */
 
+.cards-container{
+    display: grid;
+    justify-content: center;
+    row-gap: 1.625em;
+}
+
 .contact-card{
-    margin-bottom: 1.625em;
+    max-width: 380px;
     background-color: #FFFFFF;
     border-radius: 8px
 }
@@ -169,21 +178,22 @@ nav{
 
 
 
-.info span{
+.info-text{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.61;
     color: #202223;
+
 }
 .address{
     align-items: flex-start;
 }
 
-.industrial span, .industrial img{
+.industrial .info-text, .industrial img{
     margin-left: 3px;
 }
 
-.industrial span{
+.industrial .info-text{
     text-transform: capitalize;
 }
 
@@ -198,7 +208,7 @@ nav{
 /* Media Querie */
 
 
-@media (min-width: 720px){  
+@media (min-width: 768px){  
         
 
     nav{
@@ -218,13 +228,11 @@ nav{
         height: fit-content;
     }
         
-
-        .cards-container{
-            width: 83%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(200px,363px));
-            justify-content: center ;                                                                                                                                                  
-        }
+    .cards-container{
+        width: 83%;
+        grid-template-columns: repeat(2,minmax(200px,1fr));
+        column-gap: 2.75em ;   
+    }
 
         .profile{
             flex-direction: column;
@@ -233,8 +241,8 @@ nav{
         }
 
         .profile-picture{
-            width: auto;
-            height: auto;
+            width: 100% ;
+            height: 100%;
             order: -1;
         }
 
@@ -284,26 +292,25 @@ nav{
             height: 25px;
         }
         .info-img-container img{
-            width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        .address .info-img-container{
+        /* .address .info-img-container{
             margin-left:5px ;
         }
 
         .address span{
             margin-left: 8px;
-        }
+        } */
         
-        .info span{
+        .info-text{
             font-size: 1rem;
             line-height: 1.5625em;
         }
         
 
-        .industrial span, .industrial img{
+        .industrial .info-text, .industrial img{
             margin-left: 0;
         }
         
@@ -311,8 +318,15 @@ nav{
 }
 
 
-@media (min-width: 875px){
+@media (min-width:  1024px){
     .cards-container{
-        justify-content: space-evenly;
+        grid-template-columns: repeat(3,minmax(200px,363px));
     }
-}
+} 
+
+
+@media (min-width:  1280px){
+    .cards-container{
+        grid-template-columns: repeat(4,minmax(200px,363px));
+    }
+} 

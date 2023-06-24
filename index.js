@@ -6,7 +6,7 @@ const sortZToA=document.querySelector('.z-a')
 
 dropDownBtn.addEventListener('click',()=>document.querySelector('.dropdown-content').classList.toggle('show'))
 
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch('http://jsonplaceholder.typicode.com/users')
 .then(value=>value.json())
 .then(users=>{
     renderCard(users)
@@ -41,54 +41,54 @@ function renderCard(users){
                 <div class="info-img-container">
                     <img src="./assets/envelope.svg" alt="email">
                 </div>
-                    <span>
+                    <div class="info-text">
                         ${user.email}
-                    </span>
+                    </div>
                 </div>
     
                 <div class="address info">
                 <div class="info-img-container">
                     <img src="./assets/location-pin.svg" alt="location-pin">
                 </div>
-                    <span>
+                    <div>
                         ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}, ${user.address.geo.lat}, ${user.address.geo.lng}
-                    </span>
+                    </div>
                 </div>
     
                 <div class="phone info">
                 <div class="info-img-container">
                     <img src="./assets/phone.svg" alt="phone">
                 </div>
-                    <span>
+                    <div class="info-text">
                         ${user.phone}
-                    </span>
+                    </div>
                 </div>
     
                 <div class="website info">
                 <div class="info-img-container">
                     <img src="./assets/website.svg" alt="website">
                 </div>
-                    <span>
+                    <div class="info-text">
                         ${user.website}
-                    </span>
+                    </div>
                 </div>
     
                 <div class="employer info">
                 <div class="info-img-container">
                     <img src="./assets/Employer.svg" alt="Employer">
                 </div>
-                    <span>
+                    <div class="info-text">
                         ${user.company.name}
-                    </span>
+                    </div>
                 </div>
     
                 <div class="industrial info">
                 <div class="info-img-container">
                     <img src="./assets/industrial 1.svg" alt="industrial 1">
                 </div>
-                    <span>
+                    <div class="info-text">
                         ${user.company.bs}
-                    </span>
+                    </div>
                 </div>
             </div>
         </div>
