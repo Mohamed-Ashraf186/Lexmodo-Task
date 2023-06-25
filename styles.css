@@ -27,10 +27,6 @@ nav{
     width: 95%;
     margin: 0 auto;
 }
-/* 
-.search-sort-container,.cards-container{
-}  */
-
 
 
 .search{
@@ -125,7 +121,6 @@ nav{
 
 .cards-container{
     display: grid;
-    justify-content: center;
     row-gap: 1.625em;
     overflow: hidden;
     word-break: break-word; 
@@ -198,7 +193,6 @@ nav{
     font-size: 14px;
     line-height: 1.61;
     color: #595959;
-    /* max-width: $max-width; */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial;
