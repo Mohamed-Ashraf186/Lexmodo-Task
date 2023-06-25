@@ -3,8 +3,15 @@ const cardsContainer=document.querySelector('.cards-container')
 const searchBar=document.getElementById('search-bar')
 const sortAToZ=document.querySelector('.a-z')
 const sortZToA=document.querySelector('.z-a')
+const dropdown=document.querySelector('.dropdown')
 
 dropDownBtn.addEventListener('click',()=>document.querySelector('.dropdown-content').classList.toggle('show'))
+document.addEventListener('click',(e)=>{
+    if(!dropdown.contains(e.target)){
+        document.querySelector('.dropdown-content').classList.remove('show')
+    }
+})
+
 
 fetch('https://jsonplaceholder.typicode.com/users')
 .then(value=>value.json())

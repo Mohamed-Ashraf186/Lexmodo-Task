@@ -24,13 +24,14 @@ nav{
 
 
 .container{
-    width: 100%;
-}
-
-.search-sort-container,.cards-container{
+    width: 95%;
     margin: 0 auto;
-    width: 90%;
-} 
+}
+/* 
+.search-sort-container,.cards-container{
+}  */
+
+
 
 .search{
     background-color: #FFFFFF;
@@ -76,6 +77,12 @@ nav{
 .dropbtn{
     padding: 0.9375em 0.8125em 0.9375em 1.0625em;
 }
+.dropbtn:active{
+    background-color: rgb(140, 140, 140);
+}
+.dropbtn:active .drop-title{
+    color: white;
+}
 
 .dropbtn span{
     line-height: 1.25;
@@ -108,6 +115,11 @@ nav{
     color: #202223;
 }
 
+.sort:active{
+    background-color: rgb(140, 140, 140);
+    color: white;
+}
+
 
 /* Card */
 
@@ -121,7 +133,6 @@ nav{
 }
 
 .contact-card{
-    max-width: 380px;
     background-color: #FFFFFF;
     border-radius: 8px;
 }
@@ -187,6 +198,14 @@ nav{
     font-size: 14px;
     line-height: 1.61;
     color: #595959;
+    /* max-width: $max-width; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
 
 }
 .address{
@@ -212,14 +231,17 @@ nav{
 /* Media Querie */
 
 
-@media (min-width: 768px){  
+@media (min-width: 769px){  
         
 
     nav{
         padding: 2.84375em;
     }
+
+    .container{
+        width: 85%;
+    }
     .search-sort-container{
-        width: 83%;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -233,7 +255,6 @@ nav{
     }
         
     .cards-container{
-        width: 83%;
         grid-template-columns: repeat(2,minmax(200px,363px));
         justify-content: space-between;
         column-gap: 2.75em ;
@@ -319,6 +340,9 @@ nav{
 
 
 @media (min-width:  1024px){
+    .container{
+        width: 83%;
+    }
     .cards-container{
         grid-template-columns: repeat(3,minmax(200px,363px));
     }
@@ -326,6 +350,9 @@ nav{
 
 
 @media (min-width:  1280px){
+    .container{
+        max-width: 1584px;
+    }
     .cards-container{
         grid-template-columns: repeat(4,minmax(200px,363px));
     }
